@@ -1,9 +1,4 @@
 #!/usr/bin/python3
-# This codes prints the last digit and a random number
-# and states if its greater than 5
-# or its 0
-# or its less than 6 and not 0
-
 import random
 number = random.randint(-10000, 10000)
 last_digit = (number % 10)
