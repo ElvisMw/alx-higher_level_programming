@@ -10,8 +10,8 @@
 # or strings in a variable
 # You are not allowed to import any modul
 
-for num in range(100):
-    if num < 99:
-        print(f"{num:02}", end=", ")
+for num in range(0, 100):
+    if num == 99:
+        print("{}".format(num))
     else:
-        print(f"{num:02}", end="\n")
+        print("{:02}".format(num), end=", ")
