@@ -6,4 +6,4 @@
 # not allowed to import any module.
 
 for e in range(97, 123):
-    print(chr(e), end='')
+    print("{}".format(chr(e)), end='')
