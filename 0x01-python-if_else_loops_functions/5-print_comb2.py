@@ -11,5 +11,7 @@
 # You are not allowed to import any modul
 
 for num in range(100):
-    print(f"{num:02}", end=", " if num < 99 else "\n")
-
+    if num < 99:
+        print(f"{num:02}", end=", ")
+    else:
+        print(f"{num:02}", end="\n")
