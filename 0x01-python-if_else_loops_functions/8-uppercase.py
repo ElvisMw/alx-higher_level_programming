@@ -6,9 +6,9 @@
 # Not allowed to use str.upper() and str.isupper()
 
 def uppercase(str):
-    for char in str:
-        ascii_value = ord(char)
-        if 97 <= ascii_value <= 122:
-            char = chr(ord(char) - 32)
-        print("{}".format(char), end="")
+    for chu in str:
+        if ord(chu) >= 97 and ord(chu) <= 122:
+            chu = chr(ord(chu) - 32)
+        print("{}".format(chu), end="")
     print("")
+
