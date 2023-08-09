@@ -5,8 +5,8 @@
 # Not allowed to import any module
 # Not allowed to use str.upper() and str.isupper()
 
-def uppercase(input_str):
-    for char in input_str:
+def uppercase(str):
+    for char in str:
         ascii_value = ord(char)
         if 97 <= ascii_value <= 122:
             char = chr(ord(char) - 32)
