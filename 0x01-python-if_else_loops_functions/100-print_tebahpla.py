@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
-for i in range(25, -1, -1):
-    print(chr(ord('a') + i).upper()
-            if i % 2 == 0
-            else chr(ord('a') + i), end="")
+el = 0
+for cha in range(ord('z'), ord('a') - 1, -1):
+    print("{}".format(chr(cha - el)), end="")
+    el = 32 if el == 0 else 0
+
 
