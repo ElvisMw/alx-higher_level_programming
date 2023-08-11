@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-# This a program that imports functions
-# and does some Maths,and prints the result
-
 if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
 
