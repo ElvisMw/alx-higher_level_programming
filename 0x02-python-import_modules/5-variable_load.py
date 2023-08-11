@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # This program imports the variable 'a'
 # from the file variable_load_5.py & prints its value
 
