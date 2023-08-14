@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ This function that finds all multiples of 2 in a list
-It a new list with True or False, depending if or not
+It returns  new list with True or False,depending whether
 the integer at the same position in the original
 list is a multiple of 2.
 The new list should have the same size as the original list
