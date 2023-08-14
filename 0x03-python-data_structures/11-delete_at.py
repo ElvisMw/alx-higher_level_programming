@@ -10,5 +10,5 @@ def delete_at(my_list=[], idx=0):
     if idx < 0 or idx >= len(my_list):
         return my_list
 
-    my_new_list = [item for e, item in enumerate(my_list) if e != idx]
-    return my_new_list
+    new_list = [item for e, item in enumerate(my_list) if e != idx]
+    return new_list
