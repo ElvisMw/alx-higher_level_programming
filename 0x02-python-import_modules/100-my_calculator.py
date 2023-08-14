@@ -2,9 +2,11 @@
 # This code mports all functions from the
 # file calculator_1.py and handles basic operations.
 
-import sys
-from calculator_1 import add, sub, mul, div
+if __name__ == "__main__":
+    import sys
+    from calculator_1 import add, sub, mul, div
 
+# to check if number of arguments are not 3
 if len(sys.argv) != 4:
     print("Usage: ./100-my_calculator.py <a> <operator> <b>")
     sys.exit(1)
