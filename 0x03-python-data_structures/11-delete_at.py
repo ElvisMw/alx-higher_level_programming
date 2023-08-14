@@ -2,7 +2,7 @@
 """ This function that deletes the item at a
 specific position in a list. Not allowed to use pop() or
 to import any module.
-- Prototype to be used is: def delete_at(my_list=[], idx=0):
+- Prototype used is: def delete_at(my_list=[], idx=0):
 """
 
 
