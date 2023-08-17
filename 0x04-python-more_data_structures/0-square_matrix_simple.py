@@ -4,9 +4,15 @@
 
 
 def square_matrix_simple(matrix=[]):
-    new_matrix = matrix.copy()
+    new_matrix = list(map(lambda row: list(map(lambda numb: numb ** 2, row)), matrix))
+    return new_matrix
 
-    for e_j in range(len(matrix)):
-        new_matrix[e_j] = list(map(lambda x: x**2, matrix[e_j]))
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
 
-    return (new_matrix)
+new_matrix = square_matrix_simple(matrix)
+print(new_matrix)
+print(matrix)
