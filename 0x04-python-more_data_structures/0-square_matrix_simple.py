@@ -4,20 +4,9 @@
 
 
 def square_matrix_simple(matrix=[]):
-    new_matrix = []
-    
-    for row in matrix:
-        new_row = list(map(lambda x: x ** 2, row))
-        new_matrix.append(new_row)
-    
-    return new_matrix
+    nu_matrix = matrix.copy()
 
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
+    for e in range(len(matrix)):
+        nu_matrix[e] = list(map(lambda x: x**2, matrix[e]))
 
-new_matrix = square_matrix_simple(matrix)
-print(new_matrix)
-print(matrix)
+    return (nu_matrix)
