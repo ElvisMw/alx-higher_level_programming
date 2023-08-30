@@ -18,10 +18,10 @@
 def list_division(my_list_1, my_list_2, list_length):
     result = []
 
-    for i in range(list_length):
+    for e in range(list_length):
         try:
-            value_1 = my_list_1[i] if i < len(my_list_1) else 0
-            value_2 = my_list_2[i] if i < len(my_list_2) else 0
+            value_1 = my_list_1[e] if e < len(my_list_1) else 0
+            value_2 = my_list_2[e] if e < len(my_list_2) else 0
 
             if not isinstance(value_1, (int, float)) or not isinstance(value_2, (int, float)):
                 print("wrong type")
