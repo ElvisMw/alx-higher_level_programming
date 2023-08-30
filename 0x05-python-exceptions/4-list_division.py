@@ -16,23 +16,20 @@
 # not allowed to import any module
 
 def list_division(my_list_1, my_list_2, list_length):
-    result = []
 
-    for e in range(list_length):
+    new_list = []
+    for e in range(0, list_length):
         try:
-            value_1 = my_list_1[e] if e < len(my_list_1) else 0
-            value_2 = my_list_2[e] if e < len(my_list_2) else 0
-
-            if not isinstance(value_1, (int, float)) or not isinstance(value_2, (int, float)):
-                print("wrong type")
-                result.append(0)
-            elif value_2 == 0:
-                print("division by 0")
-                result.append(0)
-            else:
-                result.append(value_1 / value_2)
+            div = my_list_1[e] / my_list_2[e]
+        except TypeError:
+            print("wrong type")
+            div = 0
+        except ZeroDivisionError:
+            print("division by 0")
+            div = 0
         except IndexError:
             print("out of range")
-            result.append(0)
-
-    return result
+            div = 0
+        finally:
+            new_list.append(div)
+    return (new_list)
