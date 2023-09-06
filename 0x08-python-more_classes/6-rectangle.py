@@ -111,9 +111,9 @@ class Rectangle:
             return ""
 
         rect = []
-        for i in range(self.__height):
-            [rect.append('#') for j in range(self.__width)]
-            if i != self.__height - 1:
+        for e_m in range(self.__height):
+            [rect.append('#') for b in range(self.__width)]
+            if e_m != self.__height - 1:
                 rect.append("\n")
         return "".join(rect)
 
@@ -132,8 +132,7 @@ class Rectangle:
         """
         Destructor method called when the object is deleted.
 
-        Decrements the instance count and prints a message indicating the object is being deleted.
+        Decrements instance count& prints message indicating object is being deleted
         """
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
-
