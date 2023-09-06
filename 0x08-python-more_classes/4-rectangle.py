@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""class Rectangle that defines a rectangle by: (based on 3-rectangle.py)"""
+"""Class Rectangle definition"""
 
 
 class Rectangle:
@@ -122,4 +122,6 @@ class Rectangle:
         Returns:
             str: A string representation of the rectangle.
         """
-        return f"Rectangle({self.__width}, {self.__height})"
+        rect = "Rectangle(" + str(self.__width)
+        rect += ", " + str(self.__height) + ")"
+        return rect
