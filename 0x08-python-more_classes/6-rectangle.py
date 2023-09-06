@@ -132,7 +132,7 @@ class Rectangle:
         """
         Destructor method called when the object is deleted.
 
-        Decrements instance count& prints message indicating object is being deleted
+        Decrements instance count&prints message indicating object isdeleted
         """
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
