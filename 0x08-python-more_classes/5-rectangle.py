@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-"""Class Rectangle definition"""
 
 
 class Rectangle:
@@ -63,7 +62,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """
-        Set height of rectangle.
+        Set the height of the rectangle.
 
         Args:
             value (int): The new height value.
@@ -80,7 +79,7 @@ class Rectangle:
 
     def area(self):
         """
-        To get the area of the rectangle.
+        Calculate the area of the rectangle.
 
         Returns:
             int: The area of the rectangle.
@@ -110,7 +109,7 @@ class Rectangle:
 
         rect = []
         for e_m in range(self.__height):
-            [rect.append('#') for m in range(self.__width)]
+            [rect.append('#') for b in range(self.__width)]
             if e_m != self.__height - 1:
                 rect.append("\n")
         return "".join(rect)
@@ -125,3 +124,11 @@ class Rectangle:
         rect = "Rectangle(" + str(self.__width)
         rect += ", " + str(self.__height) + ")"
         return rect
+
+    def __del__(self):
+        """
+        Destructor method called when the object is deleted.
+
+        Prints a message indicating the object is being deleted.
+        """
+        print("Bye rectangle...")
