@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-"""This defines a rectangle by: (based on 1-rectangle.py)"""
 
 
 class Rectangle:
     """
-    This class defines a rectangle.
+    A class that defines a rectangle.
 
     Attributes:
         __width (int): The width of the rectangle.
@@ -85,3 +84,20 @@ class Rectangle:
             int: The perimeter of the rectangle.
         """
         return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        """
+        Returns a string representation of the rectangle using '#' characters.
+
+        Returns:
+            str: A string representation of the rectangle.
+        """
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        else:
+            rect_str = ""
+            for i in range(self.__height):
+                rect_str += "#" * self.__width
+                if i < self.__height - 1:
+                    rect_str += "\n"
+            return rect_str
