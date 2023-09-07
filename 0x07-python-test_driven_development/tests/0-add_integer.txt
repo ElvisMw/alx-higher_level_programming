@@ -1,4 +1,5 @@
-# Test cases for the add_integer function
+"""
+Test cases for the add_integer function
 
 >>> add_integer = __import__('0-add_integer').add_integer
 
@@ -28,4 +29,4 @@ TypeError: b must be an integer or float
 >>> add_integer(None)
 Traceback (most recent call last):
 ...
-TypeError: a must be an integer or float
+"""
