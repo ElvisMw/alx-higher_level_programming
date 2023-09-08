@@ -25,8 +25,11 @@ Traceback (most recent call last):
 ...
 TypeError: b must be an integer or float
 
-# Test case 6: Trying to add None (should raise TypeError)
->>> add_integer(None)
-Traceback (most recent call last):
-...
+# Test case 6: Trying to add None (should raise ValueError)
+>>> try:
+...     add_integer(None)
+... except ValueError as e:
+...     e
+ValueError('a cannot be None')
+
 """
