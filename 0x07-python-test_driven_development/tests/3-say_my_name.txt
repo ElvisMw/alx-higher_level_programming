@@ -24,3 +24,4 @@ last_name must be a string
 ...     print(e)
 first_name must be a string
 
+
