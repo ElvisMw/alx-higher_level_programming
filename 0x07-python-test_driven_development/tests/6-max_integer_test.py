@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Import the max_integer function from the module '6-max_integer'"""
+"""This is a unittest for the function def max_integer(list=[]):"""
 
 
 import unittest
