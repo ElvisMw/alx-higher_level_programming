@@ -7,9 +7,9 @@ def add_integer(a, b=98):
     Adds two integers.
 
     Args:
-        a (int or float): The first number to be added.
+        a (int or float): The first number for addition.
         b (int or float, optional): The second number
-        to be added. Defaults to 98.
+        for addition. Defaulted to 98.
 
     Returns:
         int: The sum of the two input numbers, cast to an integer.

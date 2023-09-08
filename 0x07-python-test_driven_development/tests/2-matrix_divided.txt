@@ -1,0 +1,47 @@
+# Test cases for the matrix_divided function
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+# Test case 1: Dividing all elements of a 2x2 matrix by 1 (no change)
+>>> matrix = [[1, 2], [3, 4]]
+>>> matrix_divided(matrix, 1)
+[[1.0, 2.0], [3.0, 4.0]]
+
+# Test case 2: Dividing all elements of a 3x3 matrix by -2
+>>> matrix = [[2, -4, 6], [-8, 10, -12], [14, -16, 18]]
+>>> matrix_divided(matrix, -2)
+[[-1.0, 2.0, -3.0], [4.0, -5.0, 6.0], [-7.0, 8.0, -9.0]]
+
+# Test case 3: Dividing all elements of a 1x1 matrix by 5
+>>> matrix = [[5]]
+>>> matrix_divided(matrix, 5)
+[[1.0]]
+
+# Test case 4: Dividing all elements of a 4x4 matrix by 0.5
+>>> matrix = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]
+>>> matrix_divided(matrix, 0.5)
+[[2.0, 4.0, 6.0, 8.0], [10.0, 12.0, 14.0, 16.0], [18.0, 20.0, 22.0, 24.0], [26.0, 28.0, 30.0, 32.0]]
+
+# Test case 5: Dividing all elements of a 2x3 matrix by a string (should raise TypeError)
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, "2")
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+# Test case 6: Dividing a non-matrix (list of integers) by 2 (should raise TypeError)
+>>> matrix = [1, 2, 3]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Test case 7: Matrix rows have different sizes (should raise TypeError)
+>>> matrix = [[1, 2, 3], [4, 5], [6, 7, 8]]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+...
+TypeError: Each row of the matrix must have the same size
