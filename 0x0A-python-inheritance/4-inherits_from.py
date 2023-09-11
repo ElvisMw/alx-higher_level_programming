@@ -3,6 +3,7 @@
 class that inherited (directly or indirectly) from the specified
 class ; otherwise False"""
 
+
 def inherits_from(obj, a_class):
     """
     Check if the given object is an instance of a class that
@@ -27,6 +28,6 @@ def inherits_from(obj, a_class):
             print("{} inherited from class {}".format(a, object.__name__))
             # Output: "True inherited from class object"
     """
-    if issubclass(type(obj), a_class) and type(obj) != a_class:
+    if issubclass(type(obj), a_class) and type(obj) is not a_class:
         return True
     return False
