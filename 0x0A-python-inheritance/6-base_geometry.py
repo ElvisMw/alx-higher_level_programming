@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This is a class BaseGeometry (based on 5-base_geometry.py)"""
 
+
 class BaseGeometry:
     """
     A base class for geometry-related functionality.
