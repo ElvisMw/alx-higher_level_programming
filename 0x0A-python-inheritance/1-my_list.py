@@ -9,7 +9,8 @@ class MyList(list):
 
     def print_sorted(self):
         """
-        Public instance method that prints the elements of the list in sorted (ascending) order.
+        Public instance method that prints the elements of
+        the list in sorted (ascending) order.
 
         Args:
             None
