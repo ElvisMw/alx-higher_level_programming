@@ -1,0 +1,44 @@
+>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+# Test Case 1: Multiply 2x2 matrices with integers
+>>> matrix_a = [[1, 2], [3, 4]]
+>>> matrix_b = [[1, 2], [3, 4]]
+>>> matrix_mul(matrix_a, matrix_b)
+[[7, 10], [15, 22]]
+
+# Test Case 2: Multiply 1x2 matrix by 2x2 matrix with integers
+>>> matrix_a = [[1, 2]]
+>>> matrix_b = [[3, 4], [5, 6]]
+>>> matrix_mul(matrix_a, matrix_b)
+[[13, 16]]
+
+# Test Case 3: Empty matrices
+>>> matrix_a = []
+>>> matrix_b = [[]]
+>>> matrix_mul(matrix_a, matrix_b)
+Traceback (most recent call last):
+    ...
+ValueError: m_a can't be empty and m_b can't be empty
+
+# Test Case 4: Matrix with non-integer/float elements
+>>> matrix_a = [['a', 2], [3, 4]]
+>>> matrix_b = [[1, 2], [3, 4]]
+>>> matrix_mul(matrix_a, matrix_b)
+Traceback (most recent call last):
+    ...
+TypeError: m_a should contain only integers or floats
+
+# Test Case 4: Multiply matrices with incompatible dimensions
+>>> matrix_a = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_b = [[1, 2], [3, 4]]
+>>> matrix_mul(matrix_a, matrix_b)
+Traceback (most recent call last):
+    ...
+ValueError: m_a and m_b can't be multiplied
+
+# Test Case 6: Multiply 2x3 matrix by 3x2 matrix with integers
+>>> matrix_a = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_b = [[1, 2], [3, 4], [5, 6]]
+>>> matrix_mul(matrix_a, matrix_b)
+[[22, 28], [49, 64]]
+

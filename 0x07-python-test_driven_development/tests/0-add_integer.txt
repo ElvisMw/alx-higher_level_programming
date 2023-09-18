@@ -23,7 +23,7 @@ Test cases for the add_integer function
 >>> add_integer(4, "School")
 Traceback (most recent call last):
 ...
-TypeError: b must be an integer or float
+TypeError: b must be an integer
 
 # Test case 6: Trying to add None (should raise ValueError)
 >>> try:
