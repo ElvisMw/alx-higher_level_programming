@@ -52,40 +52,40 @@ class TestBase_instantiation(unittest.TestCase):
         self.assertEqual("hello", Base("hello").id)
 
     def test_float_id(self):
-        self.assertEqual(5.5, Base(5.5).id)
+        self.assertEqual(6.5, Base(6.5).id)
 
     def test_complex_id(self):
-        self.assertEqual(complex(5), Base(complex(5)).id)
+        self.assertEqual(complex(6), Base(complex(6)).id)
 
     def test_dict_id(self):
-        self.assertEqual({"a": 1, "b": 2}, Base({"a": 1, "b": 2}).id)
+        self.assertEqual({"a": 4, "b": 5}, Base({"a": 4, "b": 5}).id)
 
     def test_bool_id(self):
         self.assertEqual(True, Base(True).id)
 
     def test_list_id(self):
-        self.assertEqual([1, 2, 3], Base([1, 2, 3]).id)
+        self.assertEqual([2, 3, 4], Base([2, 3, 4]).id)
 
     def test_tuple_id(self):
-        self.assertEqual((1, 2), Base((1, 2)).id)
+        self.assertEqual((4, 5), Base((4, 5)).id)
 
     def test_set_id(self):
-        self.assertEqual({1, 2, 3}, Base({1, 2, 3}).id)
+        self.assertEqual({6, 7, 8}, Base({6, 7, 8}).id)
 
     def test_frozenset_id(self):
-        self.assertEqual(frozenset({1, 2, 3}), Base(frozenset({1, 2, 3})).id)
+        self.assertEqual(frozenset({3, 4, 7}), Base(frozenset({3, 4, 7})).id)
 
     def test_range_id(self):
-        self.assertEqual(range(5), Base(range(5)).id)
+        self.assertEqual(range(89), Base(range(89)).id)
 
     def test_bytes_id(self):
-        self.assertEqual(b'Python', Base(b'Python').id)
+        self.assertEqual(b'wow', Base(b'wow').id)
 
     def test_bytearray_id(self):
-        self.assertEqual(bytearray(b'abcefg'), Base(bytearray(b'abcefg')).id)
+        self.assertEqual(bytearray(b'qwerty'), Base(bytearray(b'qwerty')).id)
 
     def test_memoryview_id(self):
-        self.assertEqual(memoryview(b'abcefg'), Base(memoryview(b'abcefg')).id)
+        self.assertEqual(memoryview(b'qwerty'), Base(memoryview(b'qwerty')).id)
 
     def test_inf_id(self):
         self.assertEqual(float('inf'), Base(float('inf')).id)
@@ -95,7 +95,7 @@ class TestBase_instantiation(unittest.TestCase):
 
     def test_two_args(self):
         with self.assertRaises(TypeError):
-            Base(1, 2)
+            Base(2, 2)
 
 
 class TestBase_to_json_string(unittest.TestCase):
@@ -433,14 +433,14 @@ class TestBase_save_to_file_csv(unittest.TestCase):
             self.assertTrue("8,10,7,2", f.read())
 
     def test_save_to_file_csv_two_squares(self):
-        s1 = Square(10, 7, 2, 8)
-        s2 = Square(8, 1, 2, 3)
+        s1 = Square(12, 3, 4, 9)
+        s2 = Square(6, 2, 5, 7)
         Square.save_to_file_csv([s1, s2])
         with open("Square.csv", "r") as f:
-            self.assertTrue("8,10,7,2\n3,8,1,2", f.read())
+            self.assertTrue("12,3,4,9\n6,2,5,7", f.read())
 
     def test_save_to_file_csv_cls_name_for_filename(self):
-        s = Square(10, 7, 2, 8)
+        s = Square(1, 7, 2, 8)
         Base.save_to_file_csv([s])
         with open("Base.csv", "r") as f:
             self.assertTrue("8,10,7,2", f.read())
