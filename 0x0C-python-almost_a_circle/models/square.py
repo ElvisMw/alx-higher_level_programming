@@ -1,42 +1,58 @@
 #!/usr/bin/python3
-"""Defines a square class."""
+"""Represents a class of square which is a specail rectangle"""
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Represent a square."""
+    """
+    This class represents a square, which is a special case of a rectangle.
+    It inherits properties and methods from the Rectangle class.
+
+    Attributes:
+        size (int): The size of the square.
+        x (int): The x-coordinate of the square's position.
+        y (int): The y-coordinate of the square's position.
+        id (int): The unique identifier of the square.
+    """
 
     def __init__(self, size, x=0, y=0, id=None):
-        """Initialize a new Square.
+        """
+        Initializes a Square instance.
 
         Args:
-            size (int): The size of the new Square.
-            x (int): The x coordinate of the new Square.
-            y (int): The y coordinate of the new Square.
-            id (int): The identity of the new Square.
+            size (int): The size of the square's sides.
+            x (int): The x-coordinate of the square's position (default is 0).
+            y (int): The y-coordinate of the square's position (default is 0).
+            id (int): The unique identifier of the square (default is None).
         """
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
-        """Get/set the size of the Square."""
+        """
+        int: The size of the square's sides. Can be accessed and modified
+        using this property, which is equivalent to changing the width and height.
+        """
         return self.width
 
     @size.setter
     def size(self, value):
+        """
+        Set the size of the square's sides, updating both width and height.
+
+        Args:
+            value (int): The new size of the square's sides.
+        """
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
-        """Update the Square.
+        """
+        Update the square's attributes based on positional arguments or keyword arguments.
 
         Args:
-            *args (ints): New attribute values.
-                - 1st argument represents id attribute
-                - 2nd argument represents size attribute
-                - 3rd argument represents x attribute
-                - 4th argument represents y attribute
-            **kwargs (dict): New key/value pairs of attributes.
+            *args: Positional arguments to update the square's attributes.
+            **kwargs: Keyword arguments to update the square's attributes.
         """
         if args and len(args) != 0:
             a = 0
@@ -55,21 +71,26 @@ class Square(Rectangle):
                 a += 1
 
         elif kwargs and len(kwargs) != 0:
-            for k, v in kwargs.items():
-                if k == "id":
-                    if v is None:
+            for e_m, b_k in kwargs.items():
+                if e_m == "id":
+                    if b_k is None:
                         self.__init__(self.size, self.x, self.y)
                     else:
-                        self.id = v
-                elif k == "size":
-                    self.size = v
-                elif k == "x":
-                    self.x = v
-                elif k == "y":
-                    self.y = v
+                        self.id = b_k
+                elif e_m == "size":
+                    self.size = b_k
+                elif e_m == "x":
+                    self.x = b_k
+                elif e_m == "y":
+                    self.y = b_k
 
     def to_dictionary(self):
-        """Return the dictionary representation of the Square."""
+        """
+        Return a dictionary representation of the square's attributes.
+
+        Returns:
+            dict: A dictionary containing the square's id, size, x, and y.
+        """
         return {
             "id": self.id,
             "size": self.width,
@@ -78,6 +99,11 @@ class Square(Rectangle):
         }
 
     def __str__(self):
-        """Return the print() and str() representation of a Square."""
+        """
+        Return a string representation of the square.
+
+        Returns:
+            str: A string describing the square's type, id, position, and size.
+        """
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)
