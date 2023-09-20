@@ -187,4 +187,3 @@ class Base:
             turt.penup()
 
         turtle.done()
-        

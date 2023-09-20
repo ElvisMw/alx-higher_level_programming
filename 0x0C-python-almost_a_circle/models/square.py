@@ -31,7 +31,8 @@ class Square(Rectangle):
     def size(self):
         """
         int: The size of the square's sides. Can be accessed and modified
-        using this property, which is equivalent to changing the width and height.
+        using this property, which is equivalent to
+        changing the width and height.
         """
         return self.width
 
@@ -48,7 +49,8 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """
-        Update the square's attributes based on positional arguments or keyword arguments.
+        Update the square's attributes based on
+        positional arguments or keyword arguments.
 
         Args:
             *args: Positional arguments to update the square's attributes.
