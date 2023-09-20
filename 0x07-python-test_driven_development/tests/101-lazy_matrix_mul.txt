@@ -1,0 +1,26 @@
+# Test cases for lazy_matrix_mul function
+>>> from 101-lazy_matrix_mul import lazy_matrix_mul
+
+# Test case 1: Multiply two 2x2 matrices
+>>> m1 = [[1, 2], [3, 4]]
+>>> m2 = [[1, 2], [3, 4]]
+>>> result = lazy_matrix_mul(m1, m2)
+>>> result
+array([[ 7, 10],
+       [15, 22]])
+
+# Test case 2: Multiply a 1x2 matrix by a 2x2 matrix
+>>> m3 = [[1, 2]]
+>>> m4 = [[3, 4], [5, 6]]
+>>> result2 = lazy_matrix_mul(m3, m4)
+>>> result2
+array([[13, 16]])
+
+# Store the results for future reference
+>>> result
+array([[ 7, 10],
+       [15, 22]])
+
+>>> result2
+array([[13, 16]])
+
