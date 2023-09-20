@@ -66,7 +66,6 @@ class TestSquare_instantiation(unittest.TestCase):
         self.assertEqual(8, s.height)
 
 
-
 class TestSquare_size(unittest.TestCase):
     """Unittests for testing size initialization of the Square class."""
 
@@ -636,6 +635,7 @@ class TestSquare_to_dictionary(unittest.TestCase):
         s = Square(10, 10, 10, 10)
         with self.assertRaises(TypeError):
             s.to_dictionary(1)
+
 
 if __name__ == "__main__":
     unittest.main()

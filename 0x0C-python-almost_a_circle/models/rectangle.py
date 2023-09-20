@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-from models.base import Base
+""" This defines a class the inherits from Base"""
+from base import Base
+
 
 class Rectangle(Base):
     """Rectangle class, inherits from Base."""
@@ -13,7 +15,8 @@ class Rectangle(Base):
             height (int): The height of the rectangle.
             x (int): The x-coordinate of the rectangle's position.
             y (int): The y-coordinate of the rectangle's position.
-            id (int): The unique identifier for the rectangle. If None, it will be generated automatically.
+            id (int): The unique identifier for the rectangle.
+            If None, it will be generated automatically.
         """
         self.width = width
         self.height = height
@@ -38,7 +41,7 @@ class Rectangle(Base):
             TypeError: If the value is not an integer.
             ValueError: If the value is less than or equal to 0.
         """
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
@@ -61,7 +64,7 @@ class Rectangle(Base):
             TypeError: If the value is not an integer.
             ValueError: If the value is less than or equal to 0.
         """
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
@@ -84,7 +87,7 @@ class Rectangle(Base):
             TypeError: If the value is not an integer.
             ValueError: If the value is less than 0.
         """
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
@@ -107,7 +110,7 @@ class Rectangle(Base):
             TypeError: If the value is not an integer.
             ValueError: If the value is less than 0.
         """
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
@@ -143,7 +146,9 @@ class Rectangle(Base):
             **kwargs: Arbitrary keyword arguments.
 
         Note:
-            If args and/or kwargs are provided, the attributes of the rectangle will be updated accordingly.
+            If args and/or kwargs are provided,
+            the attributes of
+            the rectangle will be updated accordingly.
         """
         if args and len(args) != 0:
             a = 0
