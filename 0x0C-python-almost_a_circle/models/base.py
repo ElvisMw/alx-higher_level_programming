@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""Base class for managing object"""
 import json
 import csv
 import turtle

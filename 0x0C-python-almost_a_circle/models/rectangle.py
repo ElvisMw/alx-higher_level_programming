@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ This defines a class the inherits from Base"""
-from base import Base
+from modules.base import Base
 
 
 class Rectangle(Base):
