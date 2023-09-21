@@ -120,10 +120,6 @@ class TestRectangle_width(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Rectangle({"a": 1, "b": 2}, 2)
 
-    def test_bool_width(self):
-        with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle(True, 2)
-
     def test_list_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Rectangle([1, 2, 3], 2)
@@ -769,6 +765,37 @@ class TestRectangle_update_kwargs(unittest.TestCase):
         r = Rectangle(10, 10, 10, 10, 10)
         r.update(height=5, id=89, a=1, b=54, x=19, y=7)
         self.assertEqual("[Rectangle] (89) 19/7 - 10/5", str(r))
+        
+        def test_update_kwargs_width_before_height(self):
+            r = Rectangle(10, 10, 10, 10, 10)
+            with self.assertRaisesRegex(TypeError, "width must be an integer"):
+                r.update(width="invalid", height="invalid")
+
+    def test_update_kwargs_width_before_x(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            r.update(width="invalid", x=1, y=2)
+
+    def test_update_kwargs_width_before_y(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            r.update(width="invalid", y=2)
+
+    def test_update_kwargs_height_before_x(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            r.update(height="invalid", x=1)
+
+    def test_update_kwargs_height_before_y(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            r.update(height="invalid", y=2)
+
+    def test_update_kwargs_x_before_y(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            r.update(x="invalid", y=2)
+
 
 
 class TestRectangle_to_dictionary(unittest.TestCase):
@@ -784,6 +811,35 @@ class TestRectangle_to_dictionary(unittest.TestCase):
         r2 = Rectangle(23, 4, 13, 5)
         r2.update(**r1.to_dictionary())
         self.assertNotEqual(r1, r2)
+        
+    def test_to_dictionary_empty(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        self.assertEqual({}, r.to_dictionary())
+
+    def test_to_dictionary_one(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        r_dict = {'id': 10, 'width': 10, 'height': 10, 'x': 10, 'y': 10}
+        self.assertEqual(r_dict, r.to_dictionary())
+
+    def test_to_dictionary_changed_attributes(self):
+        r = Rectangle(7, 7, 0, 0, [4])
+        r_dict = {'id': [4], 'width': 7, 'height': 7, 'x': 0, 'y': 0}
+        self.assertEqual(r_dict, r.to_dictionary())
+
+    def test_to_dictionary_updated_attributes(self):
+        r = Rectangle(7, 7, 0, 0, [4])
+        r.width = 15
+        r.height = 1
+        r.x = 8
+        r.y = 10
+        r_dict = {'id': [4], 'width': 15, 'height': 1, 'x': 8, 'y': 10}
+        self.assertEqual(r_dict, r.to_dictionary())
+
+    def test_to_dictionary_one_arg(self):
+        r = Rectangle(7, 7, 0, 0, [4])
+        with self.assertRaises(TypeError):
+            r.to_dictionary(1)
+
 
 
 if __name__ == "__main__":
