@@ -8,7 +8,7 @@ class Rectangle {
   }
 
   print () {
-    for (let e_j = 0; e_j < this.height; e_j++) {
+    for (let e = 0; e < this.height; e++) {
       let b = '';
       for (let m = 0; m < this.width; m++) {
         b += 'X';
