@@ -6,7 +6,7 @@ class Square extends SquareP {
     if (b === undefined) {
       b = 'X';
     }
-    for (let e_m = 0; e_m < this.height; e_m++) {
+    for (let e = 0; e < this.height; e++) {
       let a = '';
       for (let m = 0; m < this.width; m++) {
         a += b;
