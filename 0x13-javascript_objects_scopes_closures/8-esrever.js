@@ -1,5 +1,4 @@
 #!/usr/bin/node
-// Prototype: exports.esrever = function (list)
 exports.esrever = function (list) {
   let len = list.length - 1;
   let e_m = 0;
