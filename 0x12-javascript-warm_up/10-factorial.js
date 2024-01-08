@@ -16,3 +16,4 @@ function factorial(n) {
   const result = factorial(process.argv[2]);
   console.log(result);
   
+  
