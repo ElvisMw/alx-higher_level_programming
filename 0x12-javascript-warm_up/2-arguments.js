@@ -6,4 +6,3 @@ if (process.argv.length === 2) { // 1st & 2nd arguments are for executable path 
 } else {
   console.log('Arguments found');
 }
-

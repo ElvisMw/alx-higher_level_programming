@@ -8,5 +8,3 @@ const myObject = {
   myObject.value = 89; // Changing the value property from 12 to 89
   
   console.log(myObject);
-  
-  

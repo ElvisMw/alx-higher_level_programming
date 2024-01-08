@@ -11,5 +11,3 @@ function add(a, b) {
   } else {
     console.log(result);
   }
-  
-  
