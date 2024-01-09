@@ -15,3 +15,4 @@ for (const e in valsUniq) {
   newDict[valsUniq[e]] = list;
 }
 console.log(newDict);
+
