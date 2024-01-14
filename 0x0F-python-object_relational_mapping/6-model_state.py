@@ -4,7 +4,7 @@ This python file that contains the class definition of a
 State and an instance Base = declarative_base():
 State class:
 -inherits from Base Tips
--links to the MySQL table states
+-links to the MySQL table states.
 """
 import sys
 from model_state import Base, State

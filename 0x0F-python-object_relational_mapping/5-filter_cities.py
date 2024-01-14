@@ -3,7 +3,7 @@
 script that takes in the name of a state as an argument and
 lists all cities of that state, using the database hbtn_0e_4_usa
 It takes 4 arguments: mysql username, mysql password,
-database name and state name (SQL injection free!)
+database name and state name (SQL injection free!).
 """
 import MySQLdb
 import sys

@@ -3,7 +3,7 @@
 This script lists all states from - database hbtn_0e_0_usa:
 It takes 3 arguments: mysql username, mysql password
 and database name (no argument validation needed)
-must use the module MySQLdb (import MySQLdb)
+must use the module MySQLdb (import MySQLdb).
 """
 import MySQLdb
 import sys

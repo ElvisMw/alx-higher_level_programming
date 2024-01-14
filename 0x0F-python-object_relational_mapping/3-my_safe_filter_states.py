@@ -5,7 +5,7 @@ states table of hbtn_0e_0_usa where
 name matches the argument. But this time, write one that is
 safe from MySQL injections!
 It should take take 4 arguments: mysql username, mysql password,
-database name and state name searched (safe from MySQL injection)
+database name and state name searched (safe from MySQL injection).
 """
 import MySQLdb
 import sys

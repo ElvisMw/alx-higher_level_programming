@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 This script prints the State object with the name passed as
-argument from hbtn_0e_6_usa db
+argument from hbtn_0e_6_usa db.
 """
 import sys
 from model_state import Base, State

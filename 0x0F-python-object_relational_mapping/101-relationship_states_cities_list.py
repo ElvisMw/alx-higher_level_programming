@@ -3,7 +3,7 @@
 This script that lists all State objects, and corresponding City objects,
 contained in the database hbtn_0e_101_usa
 It takes 3 arguments: mysql username, mysql password and database name
-Results must be sorted in ascending order by states.id and cities.id
+Results must be sorted in ascending order by states.id and cities.id.
 """
 import sys
 from relationship_state import Base, State

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-City class for relationship city
+City class for relationship city.
 """
 from relationship_state import Base
 from sqlalchemy import Column, Integer, String, ForeignKey

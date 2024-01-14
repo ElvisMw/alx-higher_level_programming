@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-State class base for relationship state
+State class base for relationship state.
 """
 from sqlalchemy import Column, Integer, String, MetaData
 from sqlalchemy.ext.declarative import declarative_base

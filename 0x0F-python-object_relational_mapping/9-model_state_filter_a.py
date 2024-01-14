@@ -2,7 +2,7 @@
 """ 
 This script prints the first State object from
 the database hbtn_0e_6_usa
-It takes 3 arguments: mysql username, mysql password and database name
+It takes 3 arguments: mysql username, mysql password and database name.
 """
 import sys
 from model_state import Base, State

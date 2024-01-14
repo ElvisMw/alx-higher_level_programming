@@ -4,7 +4,7 @@ script that takes in an argument and displays all values in
 the states table of hbtn_0e_0_usa where name matches the argument.
 
 It takes 4 arguments: mysql username, mysql password, database name and
-state name searched (no argument validation needed)
+state name searched (no argument validation needed).
 """
 import MySQLdb
 import sys

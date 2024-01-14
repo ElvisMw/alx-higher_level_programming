@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Python file similar to model_state.py named model_city.py tha
-contains the class definition of a City
+contains the class definition of a City.
 """
 import sys
 from relationship_state import Base, State

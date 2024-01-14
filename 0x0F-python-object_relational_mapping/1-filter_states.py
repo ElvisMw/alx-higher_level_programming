@@ -3,7 +3,7 @@
 This script lists all states with a name starting with N (upper N) from
 the database hbtn_0e_0_usa:
 It should takes 3 arguments: mysql username, mysql password and
-database name (no argument validation needed)
+database name (no argument validation needed).
 """
 import MySQLdb
 import sys

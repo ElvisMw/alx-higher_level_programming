@@ -1,4 +1,4 @@
--- Ctreation of the states table
+-- Ctreation of the states table.
 CREATE DATABASE IF NOT EXISTS hbtn_0e_0_usa;
 USE hbtn_0e_0_usa;
 CREATE TABLE IF NOT EXISTS states ( 
