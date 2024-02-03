@@ -3,9 +3,11 @@
 
 response=$(curl -sL -w "%{http_code}" "$1")
 
-status_code=$(tail -n1 <<< "$response")
-body=$(sed '$d' <<< "$response")
+status_code=$(tail -c 4 <<< "$response")
+body=$(sed '$s/^[0-9]\{3\}//' <<< "$response")
 
-if [ "$status_code" -eq 200 ]; then
+if [[ "$status_code" == 200 ]]; then
     echo "$body"
+else
+    echo "Unexpected status code: $status_code"
 fi
