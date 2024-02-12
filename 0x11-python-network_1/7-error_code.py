@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Script that takes in a URL, sends a request, and displays 
+Script that takes in a URL, sends a request, and displays
 the body of the response. If the HTTP status code is
 greater than or equal to 400, it prints:
 "Error code:" followed by the value of the HTTP status
@@ -18,4 +18,3 @@ if __name__ == "__main__":
         print("Error code:", response.status_code)
     else:
         print(response.text)
-
