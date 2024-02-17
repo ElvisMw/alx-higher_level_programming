@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 This script that lists all State objects, and corresponding City objects,
 contained in the database hbtn_0e_101_usa
 It takes 3 arguments: mysql username, mysql password and database name

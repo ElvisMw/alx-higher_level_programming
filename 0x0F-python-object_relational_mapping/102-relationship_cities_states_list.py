@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-""" 
+"""
 This script lists all City objects from the database hbtn_0e_101_usa
 It takes 3 arguments: mysql username, mysql password and database name
-must use the state relationship to access to the State object linked to the City object
+must use the state relationship to access to
+the State object linked to the City object
 Result must be sorted in ascending order by cities.id .
 """
 import sys
